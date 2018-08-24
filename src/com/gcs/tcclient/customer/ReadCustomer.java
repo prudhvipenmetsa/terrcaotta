@@ -65,7 +65,7 @@ public static void main(String argsp[]) throws Exception{
 					 writerReader.add(""+l,firstName,lastName, email,mobilePhone,homePhone,address1,address2,city,state,zip);
 					 }
 					 */
-				 System.out.println(p1.get("firstName").get());
+				// System.out.println(p1.get("firstName").get());
 				/* 
 				 List<String> result = recordStream
 						 .explain(System.out::println)
