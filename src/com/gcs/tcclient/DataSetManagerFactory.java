@@ -27,92 +27,95 @@ public  class DataSetManagerFactory {
 	public static int timeout=300;
 	
 	//address master
-	public static final StringCellDefinition CUST_NAME = CellDefinition.defineString("CUST_NAME");
-	public static final StringCellDefinition CUST_LNG_NAME = CellDefinition.defineString("CUST_LNG_NAME");
-	public static final StringCellDefinition CUST_SHRT_NAME = CellDefinition.defineString("CUST_SHRT_NAME");
-	public static final StringCellDefinition CUST_SURNM1 = CellDefinition.defineString("CUST_SURNM1");
-	public static final StringCellDefinition CUST_SURNM2 = CellDefinition.defineString("CUST_SURNM2");
-	public static final StringCellDefinition SURVIVORSHIP_DETAILS = CellDefinition.defineString("SURVIVORSHIP_DETAILS");
+	public static class CustMaster{
+			public static final StringCellDefinition CUST_NAME = CellDefinition.defineString("CUST_NAME");
+			public static final StringCellDefinition CUST_LNG_NAME = CellDefinition.defineString("CUST_LNG_NAME");
+			public static final StringCellDefinition CUST_SHRT_NAME = CellDefinition.defineString("CUST_SHRT_NAME");
+			public static final StringCellDefinition CUST_SURNM1 = CellDefinition.defineString("CUST_SURNM1");
+			public static final StringCellDefinition CUST_SURNM2 = CellDefinition.defineString("CUST_SURNM2");
+			public static final StringCellDefinition SURVIVORSHIP_DETAILS = CellDefinition.defineString("SURVIVORSHIP_DETAILS");
+	}
 	
 	//cross walk cells
 	
-
-public static final StringCellDefinition  NAME  = CellDefinition.defineString("NAME");
-//public static final StringCellDefinition  ADDRESSLINE1 = CellDefinition.defineString("ADDRESSLINE1");
-//public static final StringCellDefinition  ADDRESSLINE2 = CellDefinition.defineString("ADDRESSLINE2");
-//public static final StringCellDefinition  ADMINISTRATIVEAREA = CellDefinition.defineString("ADMINISTRATIVEAREA");
-//public static final StringCellDefinition  LOCALITY = CellDefinition.defineString("LOCALITY");
-//public static final StringCellDefinition  POSTALCODE = CellDefinition.defineString("POSTALCODE");
-public static final StringCellDefinition  C_ADDRESSLINE1 = CellDefinition.defineString("C_ADDRESSLINE1");
-public static final StringCellDefinition  C_ADDRESSLINE2 = CellDefinition.defineString("C_ADDRESSLINE2");
-public static final StringCellDefinition  C_ADMINISTRATIVEAREA = CellDefinition.defineString("C_ADMINISTRATIVEAREA");
-public static final StringCellDefinition  C_LOCALITY = CellDefinition.defineString("C_LOCALITY");
-public static final StringCellDefinition  C_POSTALCODE = CellDefinition.defineString("C_POSTALCODE");
-public static final StringCellDefinition  C_COUNTRY = CellDefinition.defineString("C_COUNTRY");
-public static final StringCellDefinition  C_LATTITUDE = CellDefinition.defineString("C_LATTITUDE");
-public static final StringCellDefinition  C_LONGITUDE = CellDefinition.defineString("C_LONGITUDE");
-public static final StringCellDefinition  C_GEO_DISTANCE = CellDefinition.defineString("C_GEO_DISTANCE");
-public static final StringCellDefinition  MATCHING_RULE = CellDefinition.defineString("MATCHING_RULE");
-public static final StringCellDefinition  MATCHING_SCORE = CellDefinition.defineString("MATCHING_SCORE");
-public static final StringCellDefinition  ADDRESS_ID = CellDefinition.defineString("ADDRESS_ID");
-public static final StringCellDefinition  SOURCE_SYSTEM = CellDefinition.defineString("SOURCE_SYSTEM");
-public static final StringCellDefinition  SOURCE_SYSTEM_CUSTOMER_ID = CellDefinition.defineString("SOURCE_SYSTEM_CUSTOMER_ID");
-public static final StringCellDefinition  CONTRACT_ID = CellDefinition.defineString("CONTRACT_ID");
-public static final StringCellDefinition  SERVICE_ID = CellDefinition.defineString("SERVICE_ID");
-public static final StringCellDefinition  CUSTOMER_ID = CellDefinition.defineString("CUSTOMER_ID");
-
+	public static class CustCrossWalk{
+			public static final StringCellDefinition  NAME  = CellDefinition.defineString("NAME");
+			public static final StringCellDefinition  ADDRESSLINE1 = CellDefinition.defineString("ADDRESSLINE1");
+			public static final StringCellDefinition  ADDRESSLINE2 = CellDefinition.defineString("ADDRESSLINE2");
+			public static final StringCellDefinition  ADMINISTRATIVEAREA = CellDefinition.defineString("ADMINISTRATIVEAREA");
+			public static final StringCellDefinition  LOCALITY = CellDefinition.defineString("LOCALITY");
+			public static final StringCellDefinition  POSTALCODE = CellDefinition.defineString("POSTALCODE");
+			public static final StringCellDefinition  C_ADDRESSLINE1 = CellDefinition.defineString("C_ADDRESSLINE1");
+			public static final StringCellDefinition  C_ADDRESSLINE2 = CellDefinition.defineString("C_ADDRESSLINE2");
+			public static final StringCellDefinition  C_ADMINISTRATIVEAREA = CellDefinition.defineString("C_ADMINISTRATIVEAREA");
+			public static final StringCellDefinition  C_LOCALITY = CellDefinition.defineString("C_LOCALITY");
+			public static final StringCellDefinition  C_POSTALCODE = CellDefinition.defineString("C_POSTALCODE");
+			public static final StringCellDefinition  C_COUNTRY = CellDefinition.defineString("C_COUNTRY");
+			public static final StringCellDefinition  C_LATTITUDE = CellDefinition.defineString("C_LATTITUDE");
+			public static final StringCellDefinition  C_LONGITUDE = CellDefinition.defineString("C_LONGITUDE");
+			public static final StringCellDefinition  C_GEO_DISTANCE = CellDefinition.defineString("C_GEO_DISTANCE");
+			public static final StringCellDefinition  MATCHING_RULE = CellDefinition.defineString("MATCHING_RULE");
+			public static final StringCellDefinition  MATCHING_SCORE = CellDefinition.defineString("MATCHING_SCORE");
+			public static final StringCellDefinition  ADDRESS_ID = CellDefinition.defineString("ADDRESS_ID");
+			public static final StringCellDefinition  SOURCE_SYSTEM = CellDefinition.defineString("SOURCE_SYSTEM");
+			public static final StringCellDefinition  SOURCE_SYSTEM_CUSTOMER_ID = CellDefinition.defineString("SOURCE_SYSTEM_CUSTOMER_ID");
+			public static final StringCellDefinition  CONTRACT_ID = CellDefinition.defineString("CONTRACT_ID");
+			public static final StringCellDefinition  SERVICE_ID = CellDefinition.defineString("SERVICE_ID");
+			public static final StringCellDefinition  CUSTOMER_ID = CellDefinition.defineString("CUSTOMER_ID");
+	}			
 	//address cells
-	public static final StringCellDefinition  CUST_ADDR_ID = CellDefinition.defineString("CUST_ADDR_ID");
-	public static final StringCellDefinition  ADDRESSLINE1 = CellDefinition.defineString("ADDRESSLINE1");
-	public static final StringCellDefinition  ADDRESSLINE2 = CellDefinition.defineString("ADDRESSLINE2");
-	public static final StringCellDefinition  ADMINISTRATIVEAREA = CellDefinition.defineString("ADMINISTRATIVEAREA");
-	public static final StringCellDefinition  LOCALITY = CellDefinition.defineString("LOCALITY");
-	public static final StringCellDefinition  POSTALCODE = CellDefinition.defineString("POSTALCODE");
-	public static final StringCellDefinition  COUNTRY = CellDefinition.defineString("COUNTRY");
-	public static final StringCellDefinition  CUST_ID = CellDefinition.defineString("CUST_ID");
-	public static final StringCellDefinition  LONGITUDE = CellDefinition.defineString("LONGITUDE");
-	public static final StringCellDefinition  LATTITUDE = CellDefinition.defineString("LATTITUDE");
-	public static final StringCellDefinition  CUST_ADDR_EMAIL = CellDefinition.defineString("CUST_ADDR_EMAIL");
-	public static final StringCellDefinition  CUST_ADDR_PHONE_NUMBER = CellDefinition.defineString("CUST_ADDR_PHONE_NUMBER");
-	public static final StringCellDefinition  CUST_ADDR_FAX_NUMBER = CellDefinition.defineString("CUST_ADDR_FAX_NUMBER");
-	public static final StringCellDefinition  WINKEY_ADDR = CellDefinition.defineString("WINKEY_ADDR");
-	public static final StringCellDefinition  WINKEY_EMAIL = CellDefinition.defineString("WINKEY_EMAIL");
-	public static final StringCellDefinition  WINKEY_PHNMBR = CellDefinition.defineString("WINKEY_PHNMBR");
-	public static final StringCellDefinition  WINKEY_FXNMBR = CellDefinition.defineString("WINKEY_PHNMBR");
-	public static final StringCellDefinition  CUST_ADDR_TYPE = CellDefinition.defineString("CUST_ADDR_TYPE");
+	public static class CustAddress{
+			public static final StringCellDefinition  CUST_ADDR_ID = CellDefinition.defineString("CUST_ADDR_ID");
+			public static final StringCellDefinition  ADDRESSLINE1 = CellDefinition.defineString("ADDRESSLINE1");
+			public static final StringCellDefinition  ADDRESSLINE2 = CellDefinition.defineString("ADDRESSLINE2");
+			public static final StringCellDefinition  ADMINISTRATIVEAREA = CellDefinition.defineString("ADMINISTRATIVEAREA");
+			public static final StringCellDefinition  LOCALITY = CellDefinition.defineString("LOCALITY");
+			public static final StringCellDefinition  POSTALCODE = CellDefinition.defineString("POSTALCODE");
+			public static final StringCellDefinition  COUNTRY = CellDefinition.defineString("COUNTRY");
+			public static final StringCellDefinition  CUST_ID = CellDefinition.defineString("CUST_ID");
+			public static final StringCellDefinition  LONGITUDE = CellDefinition.defineString("LONGITUDE");
+			public static final StringCellDefinition  LATTITUDE = CellDefinition.defineString("LATTITUDE");
+			public static final StringCellDefinition  CUST_ADDR_EMAIL = CellDefinition.defineString("CUST_ADDR_EMAIL");
+			public static final StringCellDefinition  CUST_ADDR_PHONE_NUMBER = CellDefinition.defineString("CUST_ADDR_PHONE_NUMBER");
+			public static final StringCellDefinition  CUST_ADDR_FAX_NUMBER = CellDefinition.defineString("CUST_ADDR_FAX_NUMBER");
+			public static final StringCellDefinition  WINKEY_ADDR = CellDefinition.defineString("WINKEY_ADDR");
+			public static final StringCellDefinition  WINKEY_EMAIL = CellDefinition.defineString("WINKEY_EMAIL");
+			public static final StringCellDefinition  WINKEY_PHNMBR = CellDefinition.defineString("WINKEY_PHNMBR");
+			public static final StringCellDefinition  WINKEY_FXNMBR = CellDefinition.defineString("WINKEY_PHNMBR");
+			public static final StringCellDefinition  CUST_ADDR_TYPE = CellDefinition.defineString("CUST_ADDR_TYPE");
 
-  
+	}  
 	//service cells
-
-//public static final StringCellDefinition  CONTRACT_ID  = CellDefinition.defineString("CONTRACT_ID");
-//public static final StringCellDefinition  CUSTOMER_ID = CellDefinition.defineString("CUSTOMER_ID");
-//public static final StringCellDefinition  SERVICE_ID = CellDefinition.defineString("SERVICE_ID");
-//public static final StringCellDefinition  ADDRESS_ID = CellDefinition.defineString("ADDRESS_ID");
-//public static final StringCellDefinition  CONTRACT_SOURCE_SYSTEM = CellDefinition.defineString("CONTRACT_SOURCE_SYSTEM");
-//public static final StringCellDefinition  SOURCE_SYSTEM_CONTRACT_ID = CellDefinition.defineString("SOURCE_SYSTEM_CONTRACT_ID");
-public static final StringCellDefinition  SERVICE_TYPE = CellDefinition.defineString("SERVICE_TYPE");
-public static final StringCellDefinition  SERVICE_TYPE_CODE = CellDefinition.defineString("SERVICE_TYPE_CODE");
-public static final StringCellDefinition  SERVICE_SOURCE_SYSTEM = CellDefinition.defineString("SERVICE_SOURCE_SYSTEM");
-public static final StringCellDefinition  SOURCE_SYSTEM_SERVICE_ID = CellDefinition.defineString("SOURCE_SYSTEM_SERVICE_ID");
-public static final StringCellDefinition  SERVICE_START_DATE = CellDefinition.defineString("SERVICE_START_DATE");
-public static final StringCellDefinition  SERVICE_END_DATE = CellDefinition.defineString("SERVICE_END_DATE");
-public static final StringCellDefinition  SERVICE_CODE = CellDefinition.defineString("SERVICE_CODE");
-public static final StringCellDefinition  SERVICE_DESCRIPTION = CellDefinition.defineString("SERVICE_DESCRIPTION");
-public static final StringCellDefinition  READY_RECKONER = CellDefinition.defineString("READY_RECKONER");
-public static final StringCellDefinition  INSTALLED_INDICATOR = CellDefinition.defineString("INSTALLED_INDICATOR");
-public static final StringCellDefinition  CONFIDENTIAL_INDICATOR = CellDefinition.defineString("CONFIDENTIAL_INDICATOR");
-public static final StringCellDefinition  FAMILY_SERVICE_CODE = CellDefinition.defineString("FAMILY_SERVICE_CODE");
-public static final StringCellDefinition  CATALOG_SERVICE_CODE = CellDefinition.defineString("CATALOG_SERVICE_CODE");
-public static final StringCellDefinition  CATALOG_INDICATOR = CellDefinition.defineString("CATALOG_INDICATOR");
-public static final StringCellDefinition  MODIFY_USER = CellDefinition.defineString("MODIFY_USER");
-public static final StringCellDefinition  MODIFY_DATE = CellDefinition.defineString("MODIFY_DATE");
+	public static class CustService{
+			//public static final StringCellDefinition  CONTRACT_ID  = CellDefinition.defineString("CONTRACT_ID");
+			public static final StringCellDefinition  CUSTOMER_ID = CellDefinition.defineString("CUSTOMER_ID");
+			public static final StringCellDefinition  SERVICE_ID = CellDefinition.defineString("SERVICE_ID");
+			public static final StringCellDefinition  CUST_ADDR_ID = CellDefinition.defineString("CUST_ADDR_ID");
+			public static final StringCellDefinition  CONTRACT_SOURCE_SYSTEM = CellDefinition.defineString("CONTRACT_SOURCE_SYSTEM");
+			//public static final StringCellDefinition  SOURCE_SYSTEM_CONTRACT_ID = CellDefinition.defineString("SOURCE_SYSTEM_CONTRACT_ID");
+			public static final StringCellDefinition  SERVICE_TYPE = CellDefinition.defineString("SERVICE_TYPE");
+			public static final StringCellDefinition  SERVICE_TYPE_CODE = CellDefinition.defineString("SERVICE_TYPE_CODE");
+			public static final StringCellDefinition  SERVICE_SOURCE_SYSTEM = CellDefinition.defineString("SERVICE_SOURCE_SYSTEM");
+			public static final StringCellDefinition  SOURCE_SYSTEM_SERVICE_ID = CellDefinition.defineString("SOURCE_SYSTEM_SERVICE_ID");
+			public static final StringCellDefinition  SERVICE_START_DATE = CellDefinition.defineString("SERVICE_START_DATE");
+			public static final StringCellDefinition  SERVICE_END_DATE = CellDefinition.defineString("SERVICE_END_DATE");
+			public static final StringCellDefinition  SERVICE_CODE = CellDefinition.defineString("SERVICE_CODE");
+			public static final StringCellDefinition  SERVICE_DESCRIPTION = CellDefinition.defineString("SERVICE_DESCRIPTION");
+			public static final StringCellDefinition  READY_RECKONER = CellDefinition.defineString("READY_RECKONER");
+			public static final StringCellDefinition  INSTALLED_INDICATOR = CellDefinition.defineString("INSTALLED_INDICATOR");
+			public static final StringCellDefinition  CONFIDENTIAL_INDICATOR = CellDefinition.defineString("CONFIDENTIAL_INDICATOR");
+			public static final StringCellDefinition  FAMILY_SERVICE_CODE = CellDefinition.defineString("FAMILY_SERVICE_CODE");
+			public static final StringCellDefinition  CATALOG_SERVICE_CODE = CellDefinition.defineString("CATALOG_SERVICE_CODE");
+			public static final StringCellDefinition  CATALOG_INDICATOR = CellDefinition.defineString("CATALOG_INDICATOR");
+			public static final StringCellDefinition  MODIFY_USER = CellDefinition.defineString("MODIFY_USER");
+			public static final StringCellDefinition  MODIFY_DATE = CellDefinition.defineString("MODIFY_DATE");
+	}
 private static final Object ob1 = new java.lang.Object();
 private static final Object ob2 = new java.lang.Object();
 private static final Object ob3 = new java.lang.Object();
 private static final Object ob4 = new java.lang.Object();
 private static final Object ob5 = new java.lang.Object();
-private static final Object ob6 = new java.lang.Object();
-private static final Object ob7 = new java.lang.Object();
+
   
   public static void close(){
 		if(dataset!=null){
@@ -149,11 +152,12 @@ private static final Object ob7 = new java.lang.Object();
 			DatasetConfiguration DS_CONFIG = datasetManager.datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
-			.index(C_ADDRESSLINE1,  IndexSettings.BTREE)// <5>
-			.index(C_LOCALITY,IndexSettings.BTREE)
-			.index(SOURCE_SYSTEM_CUSTOMER_ID,IndexSettings.BTREE)
-			.index(SOURCE_SYSTEM,IndexSettings.BTREE)
-			.index(NAME,IndexSettings.BTREE)			
+			.index(CustCrossWalk.C_ADDRESSLINE1,  IndexSettings.BTREE)// <5>
+			.index(CustCrossWalk.C_LOCALITY,IndexSettings.BTREE)
+			.index(CustCrossWalk.SOURCE_SYSTEM_CUSTOMER_ID,IndexSettings.BTREE)
+			.index(CustCrossWalk.SOURCE_SYSTEM,IndexSettings.BTREE)
+			.index(CustCrossWalk.NAME,IndexSettings.BTREE)			
+			.index(CustCrossWalk.CUSTOMER_ID,IndexSettings.BTREE)
 			.build(); // <6>
 			getDatasetManager().newDataset(CUST_CROSSWALK_DS_NAME,com.terracottatech.store.Type.STRING, DS_CONFIG);
 			
@@ -185,8 +189,8 @@ private static final Object ob7 = new java.lang.Object();
 			DatasetConfiguration DS_CONFIG = datasetManager.datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
-			.index(POSTALCODE,  IndexSettings.BTREE)// <5>
-			.index(CUST_ID,IndexSettings.BTREE)
+			.index(CustAddress.POSTALCODE,  IndexSettings.BTREE)// <5>
+			.index(CustAddress.CUST_ID,IndexSettings.BTREE)
 			.build(); // <6>
 			getDatasetManager().newDataset(ADDRESS_DS_NAME,com.terracottatech.store.Type.LONG, DS_CONFIG);
 			
@@ -218,7 +222,8 @@ private static final Object ob7 = new java.lang.Object();
 			DatasetConfiguration DS_CONFIG = datasetManager.datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
-			.index(CUST_ADDR_ID,  IndexSettings.BTREE)// <5>
+			.index(CustService.CUST_ADDR_ID,  IndexSettings.BTREE)// <5>
+			.index(CustService.CUSTOMER_ID,  IndexSettings.BTREE)
 			.build(); // <6>
 			getDatasetManager().newDataset(SERVICE_DS_NAME,com.terracottatech.store.Type.LONG, DS_CONFIG);
 			
@@ -250,7 +255,7 @@ private static final Object ob7 = new java.lang.Object();
 			DatasetConfiguration CUST_MAST_CONFIG = datasetManager.datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
-			.index(CUST_NAME,  IndexSettings.BTREE)// <5>
+			.index(CustMaster.CUST_NAME,  IndexSettings.BTREE)// <5>
 			.build(); // <6>
 			getDatasetManager().newDataset(CUST_MASTER_DS_NAME,com.terracottatech.store.Type.LONG, CUST_MAST_CONFIG);
 			
