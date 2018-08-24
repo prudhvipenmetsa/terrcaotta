@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/terracotta-toolkit-runtime-ee.jar"/>
 	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/rtm-core.jar"/>
 	<classpathentry kind="lib" path="C:/SoftwareAG/common/lib/rtm-adapter-tcstore.jar"/>
+	<classpathentry kind="var" path="ENTIREX_RUNTIME"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

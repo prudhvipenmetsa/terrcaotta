@@ -47,7 +47,7 @@ public static void main(String argsp[]) throws Exception{
 				 java.lang.Long ll = java.lang.Long.parseLong("1");
 							 
 				 //writerReader.add("p1",firstName,lastName, email);
-				
+			/*	
 				 for(int i=0;i<5000000;i++){
 					 Cell<String> firstName = Cell.cell("firstName", "Prudhvi"+i);
 					 Cell<String> lastName = Cell.cell("lastName", "Penmetsa"+i);
@@ -64,6 +64,7 @@ public static void main(String argsp[]) throws Exception{
 								 
 					 writerReader.add(""+l,firstName,lastName, email,mobilePhone,homePhone,address1,address2,city,state,zip);
 					 }
+					 */
 				 System.out.println(p1.get("firstName").get());
 				/* 
 				 List<String> result = recordStream
