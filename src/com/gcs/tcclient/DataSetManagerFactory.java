@@ -18,7 +18,7 @@ public  class DataSetManagerFactory {
 	private static volatile Dataset<String>  CROSSWALK = null;
 	private static volatile Dataset<Long>  ADDRESS = null;
 	private static volatile Dataset<Long>  SERVICE = null;
-	private static volatile DatasetManager datasetManager = null;
+	private static volatile DatasetManager datasetManager2 = null;
 	public static String CUST_MASTER_DS_NAME= "CUSTOMER_MASTER_V1";
 	public static String CUST_CROSSWALK_DS_NAME= "CUSTOMER_CROSSWALK_V1";
 	public static String ADDRESS_DS_NAME= "ADDRESS_V1";
@@ -138,9 +138,9 @@ private static final Object ob5 = new java.lang.Object();
 			SERVICE.close();
 			SERVICE=null;
 		}
-		if(datasetManager!=null){
-			datasetManager.close();
-			datasetManager=null;
+		if(datasetManager2!=null){
+			datasetManager2.close();
+			datasetManager2=null;
 		}
 		
 		
@@ -149,7 +149,7 @@ private static final Object ob5 = new java.lang.Object();
 		//System.out.println
 	  synchronized(ob1)
 		{ if(CROSSWALK == null){
-			DatasetConfiguration DS_CONFIG = datasetManager.datasetConfiguration() // <3>
+			DatasetConfiguration DS_CONFIG = getDatasetManager().datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
 			.index(CustCrossWalk.C_ADDRESSLINE1,  IndexSettings.BTREE)// <5>
@@ -186,7 +186,7 @@ private static final Object ob5 = new java.lang.Object();
 		//System.out.println
 	  synchronized(ob2)
 		{ if(ADDRESS == null){
-			DatasetConfiguration DS_CONFIG = datasetManager.datasetConfiguration() // <3>
+			DatasetConfiguration DS_CONFIG = getDatasetManager().datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
 			.index(CustAddress.POSTALCODE,  IndexSettings.BTREE)// <5>
@@ -208,7 +208,7 @@ private static final Object ob5 = new java.lang.Object();
 			synchronized(ob2)
 			{ if(ADDRESS == null){
 				ADDRESS =	getDatasetManager().getDataset(ADDRESS_DS_NAME, com.terracottatech.store.Type.LONG);
-					System.out.println("NEW: Dataset not found in memory.Getting the dataset "+ CUST_MASTER_DS_NAME);
+					System.out.println("NEW: Dataset not found in memory.Getting the dataset "+ ADDRESS_DS_NAME);
 				}
 			}
 
@@ -219,7 +219,7 @@ private static final Object ob5 = new java.lang.Object();
 		//System.out.println
 	  synchronized(ob3)
 		{ if(SERVICE == null){
-			DatasetConfiguration DS_CONFIG = datasetManager.datasetConfiguration() // <3>
+			DatasetConfiguration DS_CONFIG = getDatasetManager().datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
 			.index(CustService.CUST_ADDR_ID,  IndexSettings.BTREE)// <5>
@@ -252,7 +252,7 @@ private static final Object ob5 = new java.lang.Object();
 		//System.out.println
 	  synchronized(ob4)
 		{ if(MASTER == null){
-			DatasetConfiguration CUST_MAST_CONFIG = datasetManager.datasetConfiguration() // <3>
+			DatasetConfiguration CUST_MAST_CONFIG = getDatasetManager().datasetConfiguration() // <3>
 			.offheap("second") // <4>
 			.disk("customer")
 			.index(CustMaster.CUST_NAME,  IndexSettings.BTREE)// <5>
@@ -302,7 +302,7 @@ private static final Object ob5 = new java.lang.Object();
 
 	
 	private static DatasetManager getDatasetManager() throws URISyntaxException,StoreException,Exception{
-		if(datasetManager!=null ){
+		if(datasetManager2!=null ){
 			//System.out.println("REUSE: DatasetManager Found in memory");
 		}else{
 			
@@ -313,10 +313,10 @@ private static final Object ob5 = new java.lang.Object();
 			}
 			java.net.URI clusterUri = new java.net.URI(tcURL);
 			
-			datasetManager = DatasetManager.clustered(clusterUri).withConnectionTimeout(timeout,TimeUnit.SECONDS).build() ;
+			datasetManager2 = DatasetManager.clustered(clusterUri).withConnectionTimeout(timeout,TimeUnit.SECONDS).build() ;
 			System.out.println("NEW: DatasetManager not Found in memory. Building the DSM");
 		}
-	    return datasetManager;
+	    return datasetManager2;
 				
 	
 
