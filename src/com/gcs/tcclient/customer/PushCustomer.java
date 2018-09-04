@@ -34,7 +34,7 @@ public class PushCustomer {
 	private static final StringCellDefinition ZIP = CellDefinition.defineString("zip");
 	public static void main(String argsp[]) throws Exception{
 
-		java.net.URI clusterUri = new java.net.URI( "terracotta://daehgcs28836.daedmz.loc:9410");
+		java.net.URI clusterUri = new java.net.URI( "terracotta://daehgcs28835.daedmz.loc:9410");
 		try ( 
 				//System.out.println
 				DatasetManager datasetManager =
@@ -69,7 +69,7 @@ public class PushCustomer {
 
 
 				System.out.println();
-				for(int i=0;i<5000000;i++){
+				for(int i=0;i<1;i++){
 					// writerReader.delete(""+i);
 					firstName = FNAME.newCell("Prudhvi"+l);
 					//lastName = Cell.cell("lastName", "Penmetsa"+l);

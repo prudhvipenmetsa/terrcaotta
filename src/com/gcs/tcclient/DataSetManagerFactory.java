@@ -24,7 +24,7 @@ public  class DataSetManagerFactory {
 	public static String ADDRESS_DS_NAME= "ADDRESS_V1";
 	public static String SERVICE_DS_NAME= "SERVICE_V1";
 	public static String tcURL=null;
-	public static int timeout=300;
+	public static int timeout=30;
 	
 	//address master
 	public static class CustMaster{
@@ -299,9 +299,33 @@ private static final Object ob5 = new java.lang.Object();
 		
 		return dataset;
 	}
+	public static void main(String[] args){
+		tcURL= "terracotta://daehgcs28836.daedmz.loc:9410";
+		try{//destoryAll();
+			createAllDataSets();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+	public static void createAllDataSets()throws Exception{
+		createAddressDataSet();
+		createCustCrossWalkDataSet();
+		createCustMasterDataSet();
+		createServiceDataSet();
+		
+		
+	}
+	public static void destoryAll() throws Exception{
+		
+		getDatasetManager().destroyDataset("customers");
+		//getDatasetManager().destroyDataset(CUST_CROSSWALK_DS_NAME);
+		//getDatasetManager().destroyDataset(ADDRESS_DS_NAME);
+		//getDatasetManager().destroyDataset(SERVICE_DS_NAME);
 
+	}
 	
-	private static DatasetManager getDatasetManager() throws URISyntaxException,StoreException,Exception{
+	public static DatasetManager getDatasetManager() throws URISyntaxException,StoreException,Exception{
 		if(datasetManager2!=null ){
 			//System.out.println("REUSE: DatasetManager Found in memory");
 		}else{
